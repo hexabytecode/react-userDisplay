@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ImgComponent from "./components/ImgComponent";
+import TextContainer from "./components/TextContainer";
+import { fetchUserData } from "./services/app";
 
 function App() {
+  const [userData, setUserData] = useState({});
+
+  const handleClick = async (event) => {
+    const buttonValue = event.target.value;
+    try {
+      const data = await fetchUserData(buttonValue);
+      setUserData(data);
+    } catch (e) {
+      alert(e.message);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Basic React app with API</h1>
       </header>
+      <button value={1} onClick={handleClick}>
+        1
+      </button>
+      <button value={2} onClick={handleClick}>
+        2
+      </button>
+      <button value={3} onClick={handleClick}>
+        3
+      </button>
+      <button value={100} onClick={handleClick}>
+        100
+      </button>
+      <TextContainer userData={userData} />
+      <ImgComponent userData={userData} />
     </div>
   );
 }
