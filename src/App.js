@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ImgComponent from "./components/ImgComponent";
 import TextContainer from "./components/TextContainer";
 import { fetchUserData } from "./services/app";
+import "./index.css";
 
 function App() {
   const [userData, setUserData] = useState({});
@@ -17,7 +18,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
       <header>
         <h1>Basic React app with API</h1>
       </header>
