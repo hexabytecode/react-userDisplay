@@ -1,8 +1,10 @@
+import axios from "axios";
+
 export async function fetchUserData(userId) {
-  const response = await fetch(`https://reqres.in/api/users/${userId}`);
-  if (!response.ok) {
-    throw new Error(`Failed to fetch data`);
+  try {
+    const response = await axios.get(`https://reqres.in/api/users/${userId}`);
+    return response.data.data;
+  } catch (e) {
+    throw new Error(`Failed to fetch data - ${e.message}`);
   }
-  const data = await response.json();
-  return data.data;
 }
