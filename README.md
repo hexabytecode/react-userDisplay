@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 🚀 React User Display App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Vercel](https://vercel.com/button)](https://vercel.com)  
+🔗 **Live Demo**: [https://react-user-display.vercel.app/](https://react-user-display.vercel.app/)
 
-## Available Scripts
+A modern, clean, and scalable **React** application that dynamically fetches and displays user data from an API. This project showcases **modular architecture**, uses **Axios** for API requests, and implements React best practices such as **state management**, **props handling**, and **object restructuring**.
 
-In the project directory, you can run:
+## ✨ Features
+- ⚡ **Axios for API Requests**: Replacing the Fetch API with Axios for cleaner and more efficient requests.
+- 🗂️ **Scalable Project Structure**: Organized with separation of concerns (API services, components, styles).
+- 🖼️ **Responsive Design**: Adaptive UI that looks great across devices.
+- 🎨 **Dark Theme**: Modern dark-themed user interface.
+- 🛠️ **Reusable Components**: Well-structured, reusable React components.
 
-### `npm start`
+## 📚 What Did I Learn?
+- **Axios for API Calls**: Axios simplifies API requests, making it easier to manage responses and handle errors.
+- **Modular Code**: Structuring the app with clearly defined services and components enhances scalability and maintainability.
+- **State Management**: Handling state using React's `useState` for dynamic data updates based on user interaction.
+- **Props Handling**: Passing and rendering data effectively between parent and child components.
+- **Object Restructuring**: Frequently used ES6 object destructuring to write clean, concise code.
+- **Dark Theme Implementation**: Created a cohesive dark theme UI using CSS, focusing on readability and user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎨 Screenshots
 
-### `npm test`
+![image](https://github.com/user-attachments/assets/774c4f57-3510-4686-9460-6d8f7a887d91)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🚀 How to Run Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/app-crio-takehome-mern1.git
+   cd app-crio-takehome-mern1
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+4. **Access the app**:  
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ API Details
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This app fetches user data from the [Reqres API](https://reqres.in/) and displays the user’s avatar, email, and name based on the button clicked.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Example API call:
+```js
+axios.get('https://reqres.in/api/users/1');
+```
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ and React.
