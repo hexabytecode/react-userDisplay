@@ -1,12 +1,15 @@
 import React from "react";
 
-export default function TextContainer({ userData }) {
+export default function TextContainer({
+  userData: { email, first_name, last_name },
+}) {
+  if (!email || !first_name || !last_name) {
+    return <p>No user available</p>;
+  }
   return (
     <ul>
-      <li>Email: {userData.email || ""}</li>
-      <li>
-        Name: {`${userData.first_name || ""} ${userData.last_name || ""}`}
-      </li>
+      <li>Email: {email}</li>
+      <li>Name: {`${first_name} ${last_name}`}</li>
     </ul>
   );
 }

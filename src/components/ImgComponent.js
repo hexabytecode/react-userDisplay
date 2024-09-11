@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ImgComponent({ userData }) {
-  return userData.avatar ? <img src={userData.avatar}></img> : null;
+export default function ImgComponent({ userData: { avatar } }) {
+  return avatar ? <img src={avatar}></img> : null;
 }
